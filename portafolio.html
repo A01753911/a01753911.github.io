@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Oswaldo Hernández</title>
+    <link rel="stylesheet" href="portafolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+    <style>    
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            width: 100%;
+        }
+
+        .carousel-inner {
+            display: flex;
+            overflow: hidden;
+            width: 300%; 
+            transition: transform 0.5s ease; 
+        }
+
+        .carousel-item {
+            flex: 0 0 33.3333%; 
+            opacity: 0.5; 
+            transform: scale(0.8); 
+            transition: opacity 0.5s ease, transform 0.5s ease; 
+            position: relative; 
+            z-index: 1; 
+        }
+
+        .carousel-item.active {
+            opacity: 1; 
+            transform: scale(1); 
+            z-index: 2; 
+        }
+
+
+/* Estilos para controladores con efecto de sombra */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="hero-header" id="home">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-o"></i>
+                    <div class="logo-text">Oswaldo Hernández</div>
+                </div>
+                <nav>
+                    <div class="togglebtn" onclick="toggleNav()"> <!-- Agrega la función onclick -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portafolio.html">Portafolio</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Work Section -->
+            <section class="work-experience">
+                <div id="carousel" class="carousel">
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <article class="carousel-item active">
+                            <h2 class="major">Desarrollador web Colgate Intern</h2>
+                            <div class="image-slider">
+                                <div class="slide">
+                                    <img src=".//images/colgate.JPG" alt="Imagen 1">
+                                </div>
+                                <div class="slide">
+                                    <img src=".//images/carritocolgate.JPG" alt="Imagen 2">
+                                </div>
+                                <div class="slide">
+                                    <img src=".//images/seguroColgate.JPG" alt="Imagen 3">
+                                </div>
+                            </div>
+                            <p>
+                                - Intern Desarrollador web Colgate<br>
+                                - Desarrollo de página web interna para la empresa, dirigida
+                                para empleados, uso de compra y recibo de tickets de la tienda para empleados de Colgate<br>
+                                - Automatización de reportes de logistica sobre los productos enviados a EUA en cada estado, 
+                                asimismo estimando la hora de ida y llegada del mismo.<br>
+                                - Mantenimiento y actualizaciones de la página oficial de Colgate EUA.
+                            </p>
+                        </article>
+                        <article class="carousel-item">
+                            <h2 class="major">Desarrollo Aplicación Móvil DIF Atizapán</h2>
+                            <div class="image-slider">
+                                <div class="slide">
+                                    <img src="./images/app1.JPG" alt="app1">
+                                </div>
+                                <div class="slide">
+                                    <img src="./images/app2.JPG" alt="app2">
+                                </div>
+                            </div>
+                            <p>
+                                - Desarrollador de una aplicación móvil para una institución gubernamental (DIF) 
+                                que geolocaliza comedores comunitarios más rápido que los métodos anteriores, 
+                                permitiendo a los gerentes de proyecto llegar a los beneficiarios con información 
+                                crucial de manera más rápida.<br>
+                                - La aplicación utilizó base de datos optimizadas para la recuperación eficiente de datos y 
+                                aprovecha Kotlin para una experiencia fluida en diversos dispositivos, asegurando un rendimiento 
+                                óptimo y accesibilidad para los usuarios finales.<br>
+                                - Herramientas automatizadas para el registro de usuarios, inscripción rápida con lector QR, publicación
+                                y visualización de anuncios, gestión y control de inventario,análisis y gestión de datos
+                            </p>
+                        </article>
+                        <article class="carousel-item">
+                            <h2 class="major">Desarrollo de videojuego Unity2D</h2>
+                            <div class="image-slider">
+                                <div class="slide">
+                                    <img src="/images/juego.JPG" alt="juego imagen1">
+                                </div>
+                                <div class="slide">
+                                    <img src="/images/juegologin.JPG" alt="juego imagen2">
+                                </div>
+                                <div class="slide">
+                                    <img src="/images/juegoinicio.JPG" alt="juego imagen3">
+                                </div>
+                                <div class="slide">
+                                    <img src="/images/juegojugando.JPG" alt="juego imagen4">
+                                </div>
+                                <div class="slide">
+                                    <img src="/images/juegopregunta.JPG" alt="juego imagen5">
+                                </div>
+                                <div class="slide">
+                                    <img src="/images/juego pausa.JPG" alt="juego imagen6">
+                                </div>
+                                <div class="slide">
+                                    <img src="/images/juegoperdido.JPG" alt="juego imagen7">
+                                </div>
+                            </div>
+                            <p>
+                                - Desarrollador de un videojuego realizado en el software Unity como la plataforma principal, 
+                                aprovechando sus bibliotecas, lenguaje de programación y activos. Incorporando APIs de PHP y 
+                                entrega de paquetes JSON para funciones específicas, como el inicio de sesión del usuario y 
+                                la gestión de estadísticas en las tablas de clasificación del juego. <br>
+                                
+                                - Esta combinación de tecnologías nos permitió crear una experiencia 
+                                interactiva y dinámica, asegurando un flujo de juego suave y una integración 
+                                efectiva de características clave para la interacción del usuario.
+
+
+
+
+
+                            </p>
+                        </article>
+                    </div>
+                    <!-- Carousel controls -->
+                    <a href="#" class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</a>
+                    <a href="#" class="carousel-control next" onclick="moveSlide(1)">&#10095;</a>
+                </div>
+            </section>
+        </div> <!-- FIN Wrapper -->
+    </div> <!-- FIN Hero Header -->
+
+    <script>
+
+    var togglebtn = document.querySelector(".togglebtn");
+            var nav = document.querySelector(".navlinks");
+
+            togglebtn.addEventListener("click", function() {
+                this.classList.toggle("click");
+                nav.classList.toggle("open");
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+        const sliders = document.querySelectorAll('.image-slider');
+        
+    sliders.forEach(slider => {
+        let currentImageIndex = 0;
+        const slides = slider.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[currentImageIndex].style.display = 'none';
+            currentImageIndex = (currentImageIndex + 1) % slides.length;
+            slides[currentImageIndex].style.display = 'block';
+        }, 5000); // Cambia la imagen cada 5000 milisegundos (5 segundos)
+    });
+    
+    let currentSlide = 0;
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const totalCarouselItems = carouselItems.length;
+
+    window.moveSlide = function(direction) {
+        carouselItems[currentSlide].classList.remove('active'); 
+        currentSlide = (currentSlide + direction + totalCarouselItems) % totalCarouselItems; 
+        carouselItems[currentSlide].classList.add('active'); 
+        updateCarousel();
+    };
+
+    function updateCarousel() {
+        const newTransform = `translateX(-${currentSlide * 100 / totalCarouselItems}%)`;
+        document.querySelector('.carousel-inner').style.transform = newTransform;
+    }
+
+    updateCarousel();
+});
+
+
+    </script>
+</body>
+</html>

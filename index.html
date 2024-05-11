@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header" id="home">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-o"></i>
+                    <div class="logo-text">Oswaldo Hernández</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portafolio.html">Portafolio</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src=".//images/imagenCV.jpg" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hola, soy <span class="input">Frontend Developer</span></h5>
+                    <h1>Oswaldo Hernández</h1>
+                    <p>Estudiante de sexto semestre de Ingeniería en Tecnologías Computacionales en el ITESM, Campus Estado de México. Programador con conocimientos en ingeniería de software, lógica computacional y resolución de problemas. Colaborador efectivo y responsable, dedicado a mi carrera.</p>
+                    <div class="btn-group">
+                        <a href="./docs/Curriculum Profesional_CV.pdf" class="btn active" download="Oswaldo-Hernandez-CV.pdf">Descargar CV</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/oswaldo-hernandez-de-luna/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/tuNombreDeUsuario" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        var typed = new Typed(".input", {
+            strings: ["Frontend Developer", "Android Developer", "Web Developer", "VideoGames Developer"],
+            typedSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+    </script>
+</body>
+</html>
